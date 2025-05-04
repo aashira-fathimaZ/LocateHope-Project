@@ -1,16 +1,20 @@
+# .github/workflows/nodejs-backend.yml
+
 name: Backend CI
 
 on:
-  workflow_dispatch:    # manual run from Actions UI
+  workflow_dispatch:     # manual trigger via the Actions UI or API :contentReference[oaicite:0]{index=0}
   push:
-    branches: [ aashira-fathimaZ-patch-1 ]  # only runs on your patch branch
+    branches:
+      - master          # now runs on any push to the default branch :contentReference[oaicite:1]{index=1}
 
 jobs:
   build-and-seed:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3   # grab your code :contentReference[oaicite:2]{index=2}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
