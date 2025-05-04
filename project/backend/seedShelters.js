@@ -5,7 +5,7 @@ const path = require("path");
 const { MongoClient } = require("mongodb");
 
 // 1. Replace with your Atlas connection string (use .env in production)
-const uri = process.env.MONGODB_URI || mongodb+srv://aashira:2dw55sMw80aBkdDc@cluster0.ffv5vdf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0;
+const uri = process.env.MONGODB_URI || "mongodb+srv://aashira:2dw55sMw80aBkdDc@cluster0.ffv5vdf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function seed() {
