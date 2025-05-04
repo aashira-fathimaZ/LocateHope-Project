@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Aashray Shelter Home",
+    "image": "https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg",
+    "address": "45 Gandhi Road",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "phone": "011-23456789",
+    "email": "contact@aashray.org",
+    "capacity": 100,
+    "currentOccupancy": 75,
+    "services": [
+      "Food",
+      "Medical Care",
+      "Counseling",
+      "Job Training"
+    ],
+    "successStories": 45,
+    "volunteersNeeded": true
+  },
+  {
+    "id": "2",
+    "name": "Sahara Care Center",
+    "image": "https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg",
+    "address": "23 Nehru Street",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "phone": "022-34567890",
+    "email": "info@saharacare.org",
+    "capacity": 150,
+    "currentOccupancy": 120,
+    "services": [
+      "Food",
+      "Medical Care",
+      "Education",
+      "Skill Development"
+    ],
+    "successStories": 78,
+    "volunteersNeeded": true
+  },
+  {
+    "id": "3",
+    "name": "Disha Foundation",
+    "image": "https://images.pexels.com/photos/2080960/pexels-photo-2080960.jpeg",
+    "address": "78 MG Road",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "phone": "080-45678901",
+    "email": "help@dishafoundation.org",
+    "capacity": 80,
+    "currentOccupancy": 60,
+    "services": [
+      "Food",
+      "Shelter",
+      "Education",
+      "Mental Health Support"
+    ],
+    "successStories": 32,
+    "volunteersNeeded": false
+  }
+]
