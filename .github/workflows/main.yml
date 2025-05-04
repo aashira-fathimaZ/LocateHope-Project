@@ -1,0 +1,35 @@
+name: Backend CI
+
+on:
+  workflow_dispatch:    # manual run from Actions UI
+  push:
+    branches: [ aashira-fathimaZ-patch-1 ]  # only runs on your patch branch
+
+jobs:
+  build-and-seed:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: project/backend
+
+      - name: Seed Database
+        run: npm run seed
+        working-directory: project/backend
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+
+      - name: Start Server
+        run: npm start
+        working-directory: project/backend
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
