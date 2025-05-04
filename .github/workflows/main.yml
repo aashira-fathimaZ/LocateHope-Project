@@ -1,26 +1,23 @@
-# .github/workflows/nodejs-backend.yml
-
 name: Backend CI
 
 on:
-  workflow_dispatch:     # manual trigger via the Actions UI or API :contentReference[oaicite:0]{index=0}
+  workflow_dispatch:
   push:
-    branches:
-      - master          # now runs on any push to the default branch :contentReference[oaicite:1]{index=1}
+    branches: [ master ]
 
 jobs:
   build-and-seed:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3   # grab your code :contentReference[oaicite:2]{index=2}
+      - uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
-          cache: npm
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: project/backend/package-lock.json
 
       - name: Install dependencies
         run: npm install
